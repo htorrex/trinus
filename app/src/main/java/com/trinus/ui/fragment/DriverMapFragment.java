@@ -190,6 +190,8 @@ public class DriverMapFragment extends SupportMapFragment implements
                                 googleMap.clear();
                                 btnStatus.setEnabled(false);
                                 driverLayout.setVisibility(View.GONE);
+                                Toast.makeText(getActivity(), "Service canceled by the Client.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getActivity(), "Ready to receive services.", Toast.LENGTH_LONG).show();
                             }
                         }
                     }
