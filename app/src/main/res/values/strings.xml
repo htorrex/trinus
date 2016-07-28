@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Trinus</string>
+
+    <!-- Permissions Dialog -->
+    <string name="permissions_title">Why do we ask?</string>
+    <string name="permissions_message">We need your permission to access to your gallery and upload a photo, or take a photo from camera.</string>
+    <string name="cancel_button">Cancel</string>
+
+    <!-- Menu -->
+    <string name="menu_action_settings">Settings</string>
+
+</resources>

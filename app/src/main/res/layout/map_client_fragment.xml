@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/marker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/pin_pink"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:background="@drawable/trinus_car_small"/>-->
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/pick_up_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="8dp"
+            android:background="@color/common_google_signin_btn_text_dark_pressed"
+            android:padding="8dp"
+            android:textColor="@color/accent"/>
+
+        <Button
+            android:id="@+id/btnPickUp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/primary_button_background"
+            android:enabled="false"
+            android:padding="8dp"
+            android:text="Set pickup"
+            android:textColor="@color/common_google_signin_btn_text_dark_pressed"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/request_taxi_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_arrow_back_black_36dp"
+            android:padding="8dp"
+        />
+
+        <TextView
+            android:id="@+id/txtOrigin"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="8dp"
+            android:background="@color/common_google_signin_btn_text_dark_pressed"
+            android:padding="8dp"
+            android:textColor="@color/accent"/>
+
+        <TextView
+            android:id="@+id/txtDestination"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="8dp"
+            android:background="@color/common_google_signin_btn_text_dark_pressed"
+            android:padding="8dp"
+            android:text="Add destination"
+            android:textColor="@color/primary"/>
+
+        <Button
+            android:id="@+id/btnRequestTaxi"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/accent_button_background"
+            android:enabled="false"
+            android:padding="8dp"
+            android:text="Request Taxi"
+            android:textColor="@color/common_google_signin_btn_text_dark_pressed"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/drivers_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        android:background="@color/primary_light"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtArrivingTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="ARRIVES IN 10 MIN"
+            android:textColor="@color/primary_text"/>
+
+        <RelativeLayout
+            android:id="@+id/car_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/accent_light"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtVehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txtDriversName"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="Nisan Sentra"
+                android:textColor="@color/primary_text"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtPlates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txtVehicle"
+                android:layout_alignStart="@+id/txtVehicle"
+                android:layout_below="@+id/txtVehicle"
+                android:layout_marginLeft="21dp"
+                android:layout_marginStart="21dp"
+                android:text="BE9804"
+                android:textColor="@color/primary_text"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:id="@+id/txtDriversPicture"
+                android:layout_width="105dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" android:background="@drawable/driver_sample"
+                android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/txtDriversName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/txtDriversPicture"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:padding="5dp"
+                android:text="Fulano de tal"
+                android:textColor="@color/primary_text"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txtDriversName"
+                android:layout_alignStart="@+id/txtDriversName"
+                android:layout_below="@+id/txtDriversName"
+                android:layout_marginLeft="31dp"
+                android:layout_marginStart="31dp"
+                android:text="4.5"
+                android:textColor="@color/primary_text"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cancel_layout"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/img_cancel"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_cancel_white_36dp"/>
+
+            <TextView
+                android:id="@+id/txtCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/img_cancel"
+                android:layout_toRightOf="@+id/img_cancel"
+                android:text="Cancel Ride"
+                android:textColor="@color/primary_text"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>
