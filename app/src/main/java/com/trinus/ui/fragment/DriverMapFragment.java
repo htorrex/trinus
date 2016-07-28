@@ -379,8 +379,8 @@ public class DriverMapFragment extends SupportMapFragment implements
                    public void onClick(DialogInterface dialog, int id) {
 
                        new UpdateServiceStatusRequest(DriverMapFragment.this).execute(serviceRequestDTO.getIdService(),
-                               String.valueOf(serviceRequestDTO.getUserLatitude()),
-                               String.valueOf(serviceRequestDTO.getUserLongitude()), "ACCEPTED", driverId);
+                               String.valueOf(driverLocation.getLatitude()),
+                               String.valueOf(driverLocation.getLongitude()), "ACCEPTED", driverId);
 
                        new DirectionsHelperTask(DriverMapFragment.this).execute(
                                new LatLng(driverLocation.getLatitude(), driverLocation.getLongitude()),
